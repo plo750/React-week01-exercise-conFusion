@@ -246,6 +246,14 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -300,70 +308,7 @@
             </div>
         </div>
     </div>
-
-
-    <!-- replaced by the modal form -->
-    <!--
-    <div id="reserveTable" class="row row-content justify-content-center">
-        <div class="col-12 col-sm-8">
-            <div class="card">
-                <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group row">
-                            <label for="NumberOfGuests" class="col-12 col-sm-3 col-form-label" >Number of Guests</label>
-                            <div class="form-check form-check-inline col-1 col-sm-1 offset-1 offset-sm-0">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label col-form-label" for="inlineRadio1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline col-1 col-sm-1 ">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label col-form-label" for="inlineRadio2">2</label>
-                            </div>
-                            <div class="form-check form-check-inline col-1 col-sm-1">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                <label class="form-check-label col-form-label" for="inlineRadio3">3</label>
-                            </div>
-                            <div class="form-check form-check-inline col-1 col-sm-1">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                                <label class="form-check-label col-form-label" for="inlineRadio4">4</label>
-                            </div>
-                            <div class="form-check form-check-inline col-1 col-sm-1">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-                                <label class="form-check-label col-form-label" for="inlineRadio2">5</label>
-                            </div>
-                            <div class="form-check form-check-inline col-1 col-sm-1">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
-                                <label class="form-check-label col-form-label" for="inlineRadio6">6</label>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="DateAndTime" class="col-12 col-sm-3 col-form-label" >Date and Time</label>
-                            <div class="form-check form-check-inline col-11 col-sm-4 offset-1 offset-sm-0">
-                                <div class='input-group date' id='datepicker1'>
-                                    <input id="input_date" type='text' class="form-control" placeholder="Date"/>
-                                    <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-check form-check-inline col-11 col-sm-4 offset-1 offset-sm-0">
-                                <div class="input-group time" id="timepicker1">
-                                    <input id="input_time" type="text" class="form-control timepicker" placeholder="Time">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="form-check form-check-inline col-11 col-sm-4 offset-1 offset-sm-3">                                
-                                <button type="submit" class="btn btn-primary">Reserve</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
+ 
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -409,6 +354,17 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#mycarousel').carousel({ interval: 2000});
+            $('#carousel-pause').click(function() {
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function() {
+                $('#mycarousel').carousel('cycle');
+            });
+        })
+    </script>    
     <!-- Needs by the tooltips
     <script>
         $(document).ready(function() {
