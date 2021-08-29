@@ -34,7 +34,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span clasS="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="login">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -43,7 +43,7 @@
     </nav>
 
     <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-sm" role="content">
+        <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
@@ -175,19 +175,7 @@
                 </div>
 
                 <div class="col-12 col-sm align-self-center">
-                    <!-- Button with Tooltips
-                    <a class="btn btn-block btn-warning nav-link btn-sm"role="button"
-                        data-toggle="tooltip" data-html="true" 
-                        title="Or Call us at <br><strong>+852 12345678</strong></br>"
-                        data-placement="bottom"
-                        href="#reserveTable">Reserved Table</a>
-                    -->
-                    <!--
-                    <a class="btn btn-block btn-warning nav-link btn-sm" role="button" href="#reserveTable">
-                        Reserved Table
-                    </a>
-                    -->
-                    <a class="btn btn-block btn-warning nav-link btn-sm" role="button"  data-toggle="modal" data-target="#reserveTableModal">
+                    <a id="reservedTable" class="btn btn-block btn-warning nav-link btn-sm" role="button">
                         Reserved Table
                     </a>
 
@@ -364,6 +352,18 @@
                     $("#carouselButton").children('span').addClass('fa-pause');                    
                 }
             });
+            // Task 2
+            $("#reservedTable").click( function() {
+                $('#reserveTableModal').modal('show')
+            })
+
+            // Task 3
+            $("#login").click( function() {
+                $('#loginModal').modal('show')
+            })
+
+            
+
         });
     </script>
 </body>

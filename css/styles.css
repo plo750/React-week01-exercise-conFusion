@@ -52,3 +52,18 @@ body {
   position: absolute;
   bottom: 0px;
   z-index: 1; }
+
+/* Task 4 */
+.modal-header {
+  background-color: #512DA8; }
+  .modal-header button.close:hover {
+    /* As the video on hover, button color is white */
+    color: white; }
+  .modal-header .close {
+    color: floralwhite; }
+
+.modal-title {
+  color: floralwhite; }
+
+.modal-body {
+  background-color: #D1C4E9; }
